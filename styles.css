@@ -5,6 +5,29 @@ body {
     background-color: #f4f4f4;
 }
 
+.banner {
+    background-color: #007BFF; /* BVM blue color */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    position: relative;
+}
+
+.banner h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.banner .logo {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    height: 50px;
+}
+
 .container {
     width: 80%;
     margin: 20px auto;
@@ -12,11 +35,6 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    color: #333;
 }
 
 h2 {
