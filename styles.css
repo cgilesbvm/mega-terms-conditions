@@ -18,41 +18,32 @@ body {
 .banner {
   background-color: #007BFF;
   color: white;
-  padding: 28px 24px;         /* taller header so masthead can be bigger */
-  position: relative;         /* lets us pin images to corners */
+  padding: 18px 24px; /* slightly taller */
   display: flex;
   align-items: center;
-  justify-content: center;    /* keeps the title centered */
+  justify-content: space-between;
+  gap: 18px;
+  overflow: hidden; /* prevents spillover */
 }
 
-/* Left masthead (bigger) */
 .banner .logo {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 92px;               /* <-- masthead size */
+  height: 52px; /* slightly smaller than before */
   width: auto;
-  object-fit: contain;
+  flex: 0 0 auto;
 }
 
-/* Center title (bigger) */
 .banner h1 {
   margin: 0;
   text-align: center;
-  font-size: 30px;            /* <-- title size */
-  line-height: 1.15;
-  padding: 0 170px;           /* reserve space so title doesn’t collide with images */
+  flex: 1 1 auto;
+  font-size: 30px;
+  line-height: 1.1;
 }
 
-/* Right accolades (small but readable) */
 .banner .accolades {
-  position: absolute;
-  right: 20px;
-  top: 12px;
-  height: 80px;               /* <-- accolades size */
+  height: 44px; /* slightly smaller */
   width: auto;
-  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 /* =========================
