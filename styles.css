@@ -18,12 +18,13 @@ body {
 .banner {
   background-color: #007BFF;
   color: white;
-  padding: 18px 24px; /* slightly taller */
+  padding: 18px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  overflow: hidden; /* prevents spillover */
+  overflow: hidden;
+  min-height: 86px; /* keeps room so nothing drops */
 }
 
 .banner .logo {
@@ -41,9 +42,11 @@ body {
 }
 
 .banner .accolades {
-  height: 44px; /* slightly smaller */
+  height: 52px;      /* bigger */
   width: auto;
   flex: 0 0 auto;
+  display: block;    /* prevents baseline weirdness */
+  align-self: center; /* forces vertical centering */
 }
 
 /* =========================
