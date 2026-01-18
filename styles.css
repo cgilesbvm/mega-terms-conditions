@@ -28,7 +28,7 @@ body {
 }
 
 .banner .logo {
-  height: 58px; /* slightly smaller than before */
+  height: 60px; /* slightly smaller than before */
   width: auto;
   flex: 0 0 auto;
 }
@@ -42,7 +42,7 @@ body {
 }
 
 .banner .accolades {
-  height: 60px;      /* bigger */
+  height: 64px;      /* bigger */
   width: auto;
   flex: 0 0 auto;
   display: block;    /* prevents baseline weirdness */
