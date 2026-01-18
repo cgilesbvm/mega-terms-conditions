@@ -42,7 +42,7 @@ body {
 }
 
 .banner .accolades {
-  height: 52px;      /* bigger */
+  height: 56px;      /* bigger */
   width: auto;
   flex: 0 0 auto;
   display: block;    /* prevents baseline weirdness */
