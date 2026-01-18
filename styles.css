@@ -1,102 +1,140 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+/* =========================
+   Global
+   ========================= */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-size: 18px;            /* makes everything a bit bigger */
+  color: #333;
 }
+
+/* =========================
+   Banner (header)
+   ========================= */
 
 .banner {
   background-color: #007BFF;
   color: white;
-  padding: 14px 20px;
+  padding: 28px 24px;         /* taller header so masthead can be bigger */
+  position: relative;         /* lets us pin images to corners */
   display: flex;
   align-items: center;
-  justify-content: space-between; /* left / center / right */
-  gap: 16px;
+  justify-content: center;    /* keeps the title centered */
 }
 
+/* Left masthead (bigger) */
 .banner .logo {
-  height: 46px;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 92px;               /* <-- masthead size */
   width: auto;
-  flex: 0 0 auto;
+  object-fit: contain;
 }
 
+/* Center title (bigger) */
 .banner h1 {
   margin: 0;
   text-align: center;
-  flex: 1 1 auto; /* lets the title stay centered */
-  font-size: 28px;
-  line-height: 1.1;
+  font-size: 30px;            /* <-- title size */
+  line-height: 1.15;
+  padding: 0 170px;           /* reserve space so title doesn’t collide with images */
 }
 
+/* Right accolades (small but readable) */
 .banner .accolades {
-  height: 34px;       /* adjust as needed */
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  height: 48px;               /* <-- accolades size */
   width: auto;
-  flex: 0 0 auto;
+  object-fit: contain;
 }
 
+/* =========================
+   Main content container
+   ========================= */
 
 .container {
-    width: 80%;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: min(900px, 90%);     /* nicer on large screens, still responsive */
+  margin: 24px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
 }
 
+/* =========================
+   Headings + text styling
+   (fixes gray vs black issue)
+   ========================= */
+
 h2 {
-    color: #555;
+  font-size: 24px;
+  color: #222;                /* was #555; now matches the bold black look */
+  margin: 28px 0 10px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #222;
+  margin: 22px 0 8px;
 }
 
 p {
-    line-height: 1.6;
-    color: #666;
+  line-height: 1.7;
+  color: #333;                /* slightly darker than before */
+  margin: 10px 0;
 }
+
+li {
+  line-height: 1.7;
+  color: #333;
+  margin: 6px 0;
+}
+
+/* =========================
+   Mobile adjustments
+   ========================= */
+
 @media (max-width: 700px) {
   .banner {
+    padding: 16px 14px;
     flex-direction: column;
     align-items: center;
   }
 
-  .banner h1 {
-    font-size: 22px;
+  .banner .logo {
+    position: static;
+    transform: none;
+    height: 72px;
+    margin-bottom: 8px;
   }
-}
 
-
-
-.container {
-    width: 80%;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #555;
-}
-
-p {
-    line-height: 1.6;
-    color: #666;
-}
-@media (max-width: 700px) {
-  .banner {
-    flex-direction: column;
-    align-items: center;
+  .banner .accolades {
+    position: static;
+    height: 36px;
+    margin-top: 8px;
   }
 
   .banner h1 {
+    padding: 0;
     font-size: 22px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
   }
 }
