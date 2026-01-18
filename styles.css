@@ -50,7 +50,7 @@ body {
   position: absolute;
   right: 20px;
   top: 12px;
-  height: 48px;               /* <-- accolades size */
+  height: 80px;               /* <-- accolades size */
   width: auto;
   object-fit: contain;
 }
